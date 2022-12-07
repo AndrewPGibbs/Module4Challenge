@@ -55,7 +55,26 @@ function displayQuestions(questions) {
 
 
 function selectAnswer(e) {
-
+    const targetedButton = e.target
+    if (targetedButton.classList.contains('correct')) {
+choiceReturn.classList.remove('hide')
+choiceReturn.innerHTML = 'Good Job!'
+    }
+    else {
+        //write timer deduction code here
+        choiceReturn.classList.remove('hide')
+        choiceReturn.innerHTML = 'Incorrect'
+        setTimeout(function () {
+            choiceReturn.innerHTML = '';
+        }, 1500)
+    };
+    // const correct = targetedButton.dataset.correct;
+    // choiceResult(document.body, correct)
+    // Array.from(buttonChoices.children).forEach(button => {
+    //     choiceResult(button, button.dataset.correct)
+    // })
+    // questionIndex++
+    quizQuestions()
 };
 
 function choiceResults() {
