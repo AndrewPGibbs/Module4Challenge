@@ -8,7 +8,9 @@ var choiceReturn = document.getElementById('choice-return')
 var clock = document.getElementById("clock");
 let questionArray, questionIndex;
 var score = '10';
-console.log(questionsEl)
+console.log(questionsElement)
+// document.getElementById('submit-button').addEventListener('click', wee)
+document.getElementById('start-button').addEventListener('click', startQuiz);
 
 function startQuiz() {
 beginning.classList.add('hide');
@@ -16,7 +18,7 @@ questionsElement.classList.remove('hide');
 questionsArray = questions.sort(() => Math.random() - .5);
 questionIndex = 0;
 clockTimer();
-questQuestions();
+quizQuestions();
 };
 
 function resetState() {
@@ -68,19 +70,22 @@ choiceReturn.innerHTML = 'Good Job!'
             choiceReturn.innerHTML = '';
         }, 1500)
     };
-    // const correct = targetedButton.dataset.correct;
-    // choiceResult(document.body, correct)
-    // Array.from(buttonChoices.children).forEach(button => {
-    //     choiceResult(button, button.dataset.correct)
-    // })
-    // questionIndex++
+    questionIndex++
     quizQuestions()
 };
 
-function choiceResults() {
-
-};
 
 function clockTimer() {
-
+    time--;
+    clock.innerHTML = (time < 10 ? "0" : "") + String(time);
+    if (ending.classList.contains("stop-time")) {
+      clock.innerHTML = document.getElementById("score").innerHTML
+    } else if (time > 0) {
+      setTimeout(clockTimer, 1000);
+    } else {
+      clock.innerHTML = "00";
+      questionsElement.classList.add("hide");
+      ending.classList.remove("hide");
+      document.getElementById("score").innerHTML = score;
+    }
 };
