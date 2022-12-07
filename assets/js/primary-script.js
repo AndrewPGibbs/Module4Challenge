@@ -33,12 +33,12 @@ function displayQuestion(questions) {
         document.getElementById('score').innerHTML = counter.innerHTML;
     };
     questionsTitle.innerText = questions.title;
-    questions.choices.forEach(choice => {
+    questions.choices.forEach(choices => {
         const button = document.createElement('button');
         button.innerText = choices.text;
         button.classList.add('button-style', 'answer-button');
-        if (choices.correct) {
-            button.dataset.correct = choice.correct
+        if (choices.correct === true) {
+            button.dataset.correct.add('thats right!')
         }
         button.addEventListener('click', selectAnswer);
         buttonChoices.appendChild(button);
@@ -84,7 +84,7 @@ function clockTimer() {
   time--;
   clock.innerHTML = (time < 10 ? "0" : "") + String(time);
   if (ending.classList.contains("stop-time")) {
-    clock.innerHTML = document.getElementById("score").innerHTML;
+    clock.innerHTML = document.getElementById("score").innerHTML
   } else if (time > 0) {
     setTimeout(clockTimer, 1000);
   } else {

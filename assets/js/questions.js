@@ -2,7 +2,7 @@
 
 var questions = [
     {
-        title: 'title',
+        title: 'Answer 3 is true',
         choices: [
             { text: 'answer1', correct: false},
             { text: 'answer2', correct: false},
@@ -11,7 +11,7 @@ var questions = [
         ]
     },
     {
-        title: 'title',
+        title: 'Answer 2 is false',
         choices: [
             { text: 'answer1', correct: false},
             { text: 'answer2', correct: false},
@@ -20,7 +20,7 @@ var questions = [
         ]
     },
     {
-        title: 'title',
+        title: 'Answer 3 is in fact true still',
         choices: [
             { text: 'answer1', correct: false},
             { text: 'answer2', correct: false},
@@ -29,7 +29,7 @@ var questions = [
         ]
     },
     {
-        title: 'title',
+        title: 'andswer 3 is true i gotta change these',
         choices: [
             { text: 'answer1', correct: false},
             { text: 'answer2', correct: false},
@@ -38,7 +38,7 @@ var questions = [
         ]
     },
     {
-        title: 'title',
+        title: 'shocker its 3',
         choices: [
             { text: 'answer1', correct: false},
             { text: 'answer2', correct: false},
