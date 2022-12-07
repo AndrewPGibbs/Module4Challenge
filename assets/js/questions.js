@@ -2,48 +2,48 @@
 
 var questions = [
     {
-        title: 'Answer 3 is true',
+        title: 'Javascript is based on...',
         choices: [
-            { text: 'answer1', correct: false},
-            { text: 'answer2', correct: false},
-            { text: 'answer3', correct: true},
-            { text: 'answer4', correct: false}
+            { text: 'Nord VPN', correct: false},
+            { text: 'Express', correct: false},
+            { text: 'java', correct: true},
+            { text: 'python', correct: false}
         ]
     },
     {
-        title: 'Answer 2 is false',
+        title: 'CSS stands for ',
         choices: [
-            { text: 'answer1', correct: false},
-            { text: 'answer2', correct: false},
-            { text: 'answer3', correct: true},
-            { text: 'answer4', correct: false}
+            { text: 'cascasding style sheet', correct: true},
+            { text: 'correct style sheet', correct: false},
+            { text: 'Corinth saber systems', correct: false},
+            { text: 'crystal set SQL', correct: false}
         ]
     },
     {
-        title: 'Answer 3 is in fact true still',
+        title: 'Node is written in what language?',
         choices: [
-            { text: 'answer1', correct: false},
-            { text: 'answer2', correct: false},
-            { text: 'answer3', correct: true},
-            { text: 'answer4', correct: false}
+            { text: 'English', correct: false},
+            { text: 'Python', correct: false},
+            { text: 'C#', correct: false},
+            { text: 'javascript', correct: true}
         ]
     },
     {
-        title: 'andswer 3 is true i gotta change these',
+        title: 'Bootstrap is an improvement on which?',
         choices: [
-            { text: 'answer1', correct: false},
-            { text: 'answer2', correct: false},
-            { text: 'answer3', correct: true},
-            { text: 'answer4', correct: false}
+            { text: 'Databases', correct: false},
+            { text: 'HTML', correct: false},
+            { text: 'CSS styling', correct: true},
+            { text: 'API', correct: false}
         ]
     },
     {
-        title: 'shocker its 3',
+        title: 'Javascript is...?',
         choices: [
-            { text: 'answer1', correct: false},
-            { text: 'answer2', correct: false},
-            { text: 'answer3', correct: true},
-            { text: 'answer4', correct: false}
+            { text: 'easy', correct: false},
+            { text: 'easy', correct: false},
+            { text: 'easy', correct: false},
+            { text: 'hard', correct: true}
         ]
     },
 ]
