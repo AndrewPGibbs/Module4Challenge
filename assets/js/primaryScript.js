@@ -3,7 +3,8 @@ var questionsElement = document.getElementById("questions");
 var beginning = document.getElementById("first-part");
 var ending = document.getElementById("end-part");
 var questionsTitle = document.getElementById("questions-title");
-var buttonChoices = document.getElementById("choices");
+var buttonChoices = document.querySelector(".choices");
+// var buttonChoices = document.getElementById("choices");
 var choiceReturn = document.getElementById('choice-return')
 var clock = document.getElementById("clock");
 let questionArray, questionIndex;
@@ -27,11 +28,6 @@ while (buttonChoices.firstChild) {
 }
 };
 
-function quizQuestions() {
-resetState();
-displayQuestion(questionArray[questionIndex]);
-};
-
 function displayQuestions(questions) {
     if (questionIndex > 3) {
         ending.classList.add('stop-time')
@@ -53,6 +49,13 @@ function displayQuestions(questions) {
         buttonChoices.appendChild(button);
     })
 };
+
+function quizQuestions() {
+resetState();
+displayQuestions(questionsArray[questionIndex]);
+};
+
+
 
 
 
