@@ -37,7 +37,16 @@ function winGame() {
     wordBlank.textContent = "You lose!";
     startButton.disabled = false;
   }
-  
+
+  function checkWin() {
+    if (time <= 0) {
+        loseGame()
+    } else {
+        if (ending.classList.contains("stop-time")) {
+             winGame();
+        }
+    }
+  };
 function displayQuestions(questions) {
     if (questionIndex > 3) {
         ending.classList.add('stop-time')
@@ -92,10 +101,11 @@ function clockTimer() {
     time--;
     clock.innerHTML = (time < 10 ? "0" : "") + String(time);
     if (ending.classList.contains("stop-time")) {
-      clock.innerHTML = document.getElementById("score").innerHTML
+      clock.innerHTML = document.getElementById("score").innerHTML + checkWin()
     } else if (time > 0) { 
-      setTimeout(clockTimer, 1000);
+      setTimeout(clockTimer, 1000)+checkWin();
     } else {
+        checkWin();
       clock.innerHTML = "00";
       questionsElement.classList.add("hide");
       ending.classList.remove("hide");
