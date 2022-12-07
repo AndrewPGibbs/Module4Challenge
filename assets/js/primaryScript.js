@@ -1,10 +1,10 @@
 var time = 60;
 var questionsElement = document.getElementById("questions");
+var wordBlank = document.getElementById('winLoss');
 var beginning = document.getElementById("first-part");
 var ending = document.getElementById("end-part");
 var questionsTitle = document.getElementById("questions-title");
 var buttonChoices = document.querySelector(".choices");
-// var buttonChoices = document.getElementById("choices");
 var choiceReturn = document.getElementById('choice-return')
 var clock = document.getElementById("clock");
 let questionArray, questionIndex;
@@ -28,6 +28,16 @@ while (buttonChoices.firstChild) {
 }
 };
 
+function winGame() {
+    wordBlank.textContent = "YOU WON!!!🏆 ";
+    startButton.disabled = false;
+  }
+
+  function loseGame() {
+    wordBlank.textContent = "You lose!";
+    startButton.disabled = false;
+  }
+  
 function displayQuestions(questions) {
     if (questionIndex > 3) {
         ending.classList.add('stop-time')
@@ -66,7 +76,7 @@ choiceReturn.classList.remove('hide')
 choiceReturn.innerHTML = 'Good Job!'
     }
     else {
-        //write timer deduction code here
+        time -= 10
         choiceReturn.classList.remove('hide')
         choiceReturn.innerHTML = 'Incorrect'
         setTimeout(function () {
@@ -91,4 +101,7 @@ function clockTimer() {
       ending.classList.remove("hide");
       document.getElementById("score").innerHTML = score;
     }
+
+
+    // window.location.href = "./highscores.html";
 };
