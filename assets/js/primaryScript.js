@@ -8,7 +8,7 @@ var buttonChoices = document.querySelector(".choices");
 var choiceReturn = document.getElementById('choice-return')
 var clock = document.getElementById("clock");
 let questionArray, questionIndex;
-var score = '10';
+var score = '';
 console.log(questionsElement)
 // document.getElementById('submit-button').addEventListener('click', wee)
 document.getElementById('start-button').addEventListener('click', startQuiz);
@@ -43,7 +43,7 @@ function displayQuestions(questions) {
         button.innerText = choices.text;
         button.classList.add('button-style', 'answer-button');
         if (choices.correct === true) {
-            button.dataset.correct.add('thats right!')
+            button.classList.add('correct')
         }
         button.addEventListener('click', selectAnswer);
         buttonChoices.appendChild(button);
@@ -83,7 +83,7 @@ function clockTimer() {
     clock.innerHTML = (time < 10 ? "0" : "") + String(time);
     if (ending.classList.contains("stop-time")) {
       clock.innerHTML = document.getElementById("score").innerHTML
-    } else if (time > 0) {
+    } else if (time > 0) { 
       setTimeout(clockTimer, 1000);
     } else {
       clock.innerHTML = "00";
