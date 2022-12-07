@@ -38,7 +38,7 @@ function displayQuestion(questions) {
         button.innerText = choices.text;
         button.classList.add('button-style', 'answer-button');
         if (choices.correct === true) {
-            button.dataset.correct.add('thats right!')
+            button.classList.add('correct')
         }
         button.addEventListener('click', selectAnswer);
         buttonChoices.appendChild(button);
